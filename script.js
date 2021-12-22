@@ -2,8 +2,9 @@
 function generatePassword(){
   var letters=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   // TODO:CHANGE NUMBERS AND SYMBOLS TO THE SYNTAX OF THE LETTERS SHOWN ABOVE
-  var numbers=["1,2,3,4,5,6,7,8,9,0"];
-  var symbols=["!,@,#,$,%,^,&,*,(,),_,+,=,],[,?,>,<,~"];
+  var numbers=["1","2","3","4","5","6","7","8","9","0"];
+  var symbols=["!","@","#","$","%","^","&","*","(",")","_","+"
+  ,"=","]","[","?",">","<","~"];
 
   return "hello";
 }
@@ -24,8 +25,17 @@ console.log(lowercase)
 
 //var r = confirm("Are you sure you want to delete?");
 // TODO: confirm whether or not to include uppercase
+var lowercase = confirm("Do you want to include uppercase letters in your password?");
+console.log(uppercase)
+
 // TODO: confirm whether or not to include numbers
+var lowercase = confirm("Do you want to include numbers in your password?");
+console.log(numbers)
+
 // TODO: confirm whether or not to include symbols
+var lowercase = confirm("Do you want to include symbols in your password?");
+console.log(symbols)
+
 // TODO:validate that at least one character type is selected 
 
 //if none of these are true, restart the function
