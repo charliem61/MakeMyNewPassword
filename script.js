@@ -11,6 +11,7 @@ function generatePassword(){
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+console.log(generateBtn)
 
 // Write password to the #password input
 function writePassword() {
@@ -19,21 +20,29 @@ function writePassword() {
   //TODO: WHEN prompted for password criteria
 // THEN I select choose password length
 // TODO: Choose length at least 8 char and no more than 128
+
+var=length =confirm ("How long do you want your password?")
+console.log(length)
+
 // TODO: confirm whether or not to include lowercase
+
 var lowercase = confirm("Do you want to include lowercase letters in your password?");
 console.log(lowercase)
 
 //var r = confirm("Are you sure you want to delete?");
 // TODO: confirm whether or not to include uppercase
-var lowercase = confirm("Do you want to include uppercase letters in your password?");
+
+var uppercase = confirm("Do you want to include uppercase letters in your password?");
 console.log(uppercase)
 
 // TODO: confirm whether or not to include numbers
-var lowercase = confirm("Do you want to include numbers in your password?");
+
+var numbers = confirm("Do you want to include numbers in your password?");
 console.log(numbers)
 
 // TODO: confirm whether or not to include symbols
-var lowercase = confirm("Do you want to include symbols in your password?");
+
+var symbols = confirm("Do you want to include symbols in your password?");
 console.log(symbols)
 
 // TODO:validate that at least one character type is selected 
@@ -45,6 +54,7 @@ example writePassword ()
 // TODO: password generated that fits criteria
 // TODO: Pass parameters to generate password function
 var password = generatePassword(length,lowercase, uppercase, numbers, symobols);
+console.log(password)
 // TODO: password displayed or alert shown
 var passwordText = document.querySelector("#password");
 
