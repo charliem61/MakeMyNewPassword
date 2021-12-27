@@ -26,7 +26,6 @@ function generatePassword() {
   password += "h";
   password += "i";
   password += "j";
-  password += "";
   password += "k";
   password += "l";
   password += "m";
