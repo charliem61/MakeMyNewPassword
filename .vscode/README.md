@@ -1,11 +1,11 @@
+README
+
 MAKE MY NEW PASSWORD (Random Password Generator)
 
 
 Repo Link: https://github.com/charliem61/MakeMyNewPassword
 
 Live Url: https://github.com/charliem61/MakeMyNewPassword.git
-
-
 
 Goal/Motivation:
 
