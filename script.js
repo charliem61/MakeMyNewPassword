@@ -8,9 +8,73 @@ var letters=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q"
 var numbers=["1","2","3","4","5","6","7","8","9","0"];
 var symbols=["!","@","#","$","%","^","&","*","(",")","_","+"
 ,"=","]","[","?",">","<","~"];
-function generatePassword(){
+function generatePassword() {
+
+  var password ="";
+
+  console.log('generate a password.');
+
+  //for loop until password is desired length//
+
+  password += "a";
+  password += "b";
+  password += "c";
+  password += "d";
+  password += "e";
+  password += "f";
+  password += "g";
+  password += "h";
+  password += "i";
+  password += "j";
+  password += "";
+  password += "k";
+  password += "l";
+  password += "m";
+  password += "n";
+  password += "o";
+  password += "p";
+  password += "q";
+  password += "r";
+  password += "s";
+  password += "t";
+  password += "u";
+  password += "v";
+  password += "w";
+  password += "x";
+  password += "y";
+  password += "z";
+  password += "1";
+  password += "2";
+  password += "3";
+  password += "4";
+  password += "5";
+  password += "6";
+  password += "7";
+  password += "8";
+  password += "9";
+  password += "0";
+  password += "!";
+  password += "@";
+  password += "#";
+  password += "$";
+  password += "%";
+  password += "^";
+  password += "&";
+  password += "*";
+  password += "(";
+  password += ")";
+  password += "_";
+  password += "+";
+  password += "=";
+  password += "[";
+  password += "]";
+  password += "?";
+  password += "<";
+  password += ">";
+  password += "~";
 
   return "password";
+
 }
 
 
@@ -21,9 +85,7 @@ function writePassword() {
 
   passwordText.value = password
 
-
-
-  // TODO:I am presented with a series of prompts for password criteria
+// TODO:I am presented with a series of prompts for password criteria
 
   //TODO: WHEN prompted for password criteria
 // THEN I select choose password length
