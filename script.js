@@ -181,37 +181,50 @@ var symbols = [
 function generatePassword() {
   console.log("generatePassword");
   
-  var length = prompt("How long do you want your password?");
-  console.log(length);
+  var lengthChoice = prompt("How long do you want your password?");
+  console.log(lengthChoice);////////
   
   // TODO: confirm whether or not to include lowercase
   
-  var lowercase = confirm(
+  var lowercaseChoice = confirm(
     "Do you want to include lowercase letters in your password?"
     );
-    console.log(lowercase);
+    console.log(lowercase);///////
     
     //var r = confirm("Are you sure you want to delete?");
 
     // TODO: confirm whether or not to include uppercase
     
-    var uppercase = confirm(
+    var uppercaseChoice = confirm(
       "Do you want to include uppercase letters in your password?"
       );
-      console.log(uppercase);
+      console.log(uppercaseChoice);///////
       
       // TODO: confirm whether or not to include numbers
       
-      var numbers = confirm("Do you want to include numbers in your password?");
+      var numbersChoice = confirm("Do you want to include numbers in your password?");
       console.log(numbers);
       
       // TODO: confirm whether or not to include symbols
       
-      var symbols = confirm("Do you want to include symbols in your password?");
-      console.log(symbols);
+      var symbolsChoice = confirm("Do you want to include symbols in your password?");//////
+      console.log(symbolsChoice);///////
       // TODO:validate that at least one character type is selected
       
-      if (lowercase || uppercase || numbers || symbols) {
+      if (lowercaseChoice || uppercaseChoice|| numbersChoice || symbolsChoice) {
+
+        var charChoices = [];
+
+        // IF lowercaseChoice
+
+            // THEN add `lowercase` to `charChoices`
+
+            // .concat()
+            charChoices = charChoices.concat(lowercase);
+
+        // IF uppercaseChoice
+
+            // THEN add `uppercase` to `charChoices`
         
         var password = ""
 
@@ -219,6 +232,8 @@ function generatePassword() {
         //for loop until password is desired length//
         
         for (var i = 0; i < length; i++) {
+
+          // Choose a random item from `charChoices`
           password += "a"
 
           // end of first loop i = 0, add 1 to it (i++), i is now 1
