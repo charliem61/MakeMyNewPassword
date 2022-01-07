@@ -85,7 +85,6 @@ var symbols = [
   "~",
 ];
 
-
 // password += "a";
 // password += "b";
 // password += "c";
@@ -168,8 +167,6 @@ var symbols = [
 // password += ">";
 // password += "~";
 
-
-
 // TODO:I am presented with a series of prompts for password criteria
 
 //TODO: WHEN prompted for password criteria
@@ -180,93 +177,102 @@ var symbols = [
 
 function generatePassword() {
   console.log("generatePassword");
-  
+
   var lengthChoice = prompt("How long do you want your password?");
-  console.log(lengthChoice);////////
-  
+  console.log(lengthChoice);
+
   // TODO: confirm whether or not to include lowercase
-  
+
   var lowercaseChoice = confirm(
     "Do you want to include lowercase letters in your password?"
-    );
-    console.log(lowercase);///////
-    
-    //var r = confirm("Are you sure you want to delete?");
+  );
+  console.log(lowercaseChoice);
 
-    // TODO: confirm whether or not to include uppercase
-    
-    var uppercaseChoice = confirm(
-      "Do you want to include uppercase letters in your password?"
-      );
-      console.log(uppercaseChoice);///////
-      
-      // TODO: confirm whether or not to include numbers
-      
-      var numbersChoice = confirm("Do you want to include numbers in your password?");
-      console.log(numbers);
-      
-      // TODO: confirm whether or not to include symbols
-      
-      var symbolsChoice = confirm("Do you want to include symbols in your password?");//////
-      console.log(symbolsChoice);///////
-      // TODO:validate that at least one character type is selected
-      
-      if (lowercaseChoice || uppercaseChoice|| numbersChoice || symbolsChoice) {
+  //var r = confirm("Are you sure you want to delete?");
 
-        var charChoices = [];
+  // TODO: confirm whether or not to include uppercase
 
-        // IF lowercaseChoice
+  var uppercaseChoice = confirm(
+    "Do you want to include uppercase letters in your password?"
+  );
+  console.log(uppercaseChoice);
 
-            // THEN add `lowercase` to `charChoices`
+  // TODO: confirm whether or not to include numbers
 
-            // .concat()
-            charChoices = charChoices.concat(lowercase);
+  var numbersChoice = confirm(
+    "Do you want to include numbers in your password?"
+  );
+  console.log(numbersChoice);
 
-        // IF uppercaseChoice
+  // TODO: confirm whether or not to include symbols
 
-            // THEN add `uppercase` to `charChoices`
-        
-        var password = ""
+  var symbolsChoice = confirm(
+    "Do you want to include symbols in your password?"
+  );
+  console.log(symbolsChoice);
 
+  // TODO:validate that at least one character type is selected
 
-        //for loop until password is desired length//
-        
-        for (var i = 0; i < length; i++) {
+  if (lowercaseChoice || uppercaseChoice || numbersChoice || symbolsChoice) {
+    var charChoices = [];
 
-          // Choose a random item from `charChoices`
-          password += "a"
+    // IF lowercaseChoice
 
-          // end of first loop i = 0, add 1 to it (i++), i is now 1
-          // end of second loop i = 1, add 1 to it (i++), i is now 2
-        }
-        
-        //password += symbols[Math.random];
-       //password += numbers[Math.random];
-      //password += uppercase[Math.random];
-    //password += lowercase[Math.random];
-       
-       
-        // // a
-        // password += "b";
-        // // ab
-        // password += "c";
-        // // abc
-        // password += "d";
-        // // abcd
+    // THEN add `lowercase` to `charChoices`
 
-        return password
-      } else {
-        generatePassword()
+    // .concat()
+    charChoices = charChoices.concat(lowercase);
 
-      }
+    // IF uppercaseChoice
+
+    // THEN add `uppercase` to `charChoices`
+    charChoices = charChoices.concat(uppercase);
+
+    // IF numbersChoice
+
+    // THEN add `numbers` to `charChoices`
+    charChoices = charChoices.concat(numbers);
+
+    //IF symbolsChoice
+
+    // THEN add `symbols` to `charChoices`
+    charChoices = charChoices.concat(symbols);
+
+    var password = "";
+
+    //for loop until password is desired length//
+
+    for (var i = 0; i < length; i++) {
+      // Choose a random item from `charChoices`
+      password += "a";
+
+      // end of first loop i = 0, add 1 to it (i++), i is now 1
+      // end of second loop i = 1, add 1 to it (i++), i is now 2
     }
-    
-    
-    // || are called pipes and they simply mean OR//
-    
-    // /* kfjkafhaghig */ is called a block comment and this blocks all code within //
-    
-    
+
+    //password += symbols[Math.random];
+    //password += numbers[Math.random];
+    //password += uppercase[Math.random];
+    //password += lowercase[Math.random];
+
+    // // a
+    // password += "b";
+    // // ab
+    // password += "c";
+    // // abc
+    // password += "d";
+    // // abcd
+
+    return password;
+  } else {
+    generatePassword();
+  }
+}
+
+// || are called pipes and they simply mean OR//
+
+// /* REMEMBERthisNOTE */ is called a block comment and this blocks all code within //
+
 //if none of these are true, restart the function
 
 // TODO: password generated that fits criteria
@@ -282,10 +288,10 @@ passwordText.value = password;
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword ();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password
+  passwordText.value = password;
   console.log("generate button click");
 }
 
