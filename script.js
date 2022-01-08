@@ -102,7 +102,8 @@ function getRandomNumber(min, max) {
 function generatePassword() {
   // console.log("generatePassword");
 
-  var lengthChoice = prompt("How long do you want your password?");
+  var lengthChoice = prompt("How long do you want your password (8-128 characters)?");
+  if (lengthChoice < 8 || lengthChoice > 128) generatePassword ();
   // console.log(lengthChoice);
 
   // TODO: confirm whether or not to include lowercase
@@ -147,27 +148,29 @@ function generatePassword() {
     // THEN add `lowercase` to `charChoices`
 
     // .concat()
-    charChoices = charChoices.concat(lowercase);
+    if (lowercaseChoice) charChoices = charChoices.concat(lowercase);
 
     // IF uppercaseChoice
 
     // THEN add `uppercase` to `charChoices`
-    charChoices = charChoices.concat(uppercase);
+    if (uppercaseChoice) charChoices = charChoices.concat(uppercase);
 
     // IF numbersChoice
 
     // THEN add `numbers` to `charChoices`
-    charChoices = charChoices.concat(numbers);
+    if (numbersChoice) charChoices = charChoices.concat(numbers);
 
     //IF symbolsChoice
 
     // THEN add `symbols` to `charChoices`
-    charChoices = charChoices.concat(symbols);
+    if (symbolsChoice) charChoices = charChoices.concat(symbols);
 
     var password = "";
 
     //for loop until password is desired length//
 
+    // MAKE SURE YOU INCLUDE AT LEAST ONE OF CHARACTER TYPE IF THEY CHOSE YES FOR THAT TYPE
+    // -- IF THEY CHOSE YES/OK TO UPPERCASE, PASSWORD NEEDS AT LEAST ONE UPPERCASE
     for (var i = 0; i < lengthChoice; i++) {
       // Choose a random item from `charChoices`///And appending to password string.//
       password += charChoices[getRandomNumber(0, charChoices.length - 1)];
