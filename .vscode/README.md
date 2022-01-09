@@ -26,6 +26,8 @@ Challenges Faced:
     Being a perfectionist. Getting beyond frustrated when we started in javascipt and my brain shutting down and wanting to drop out which brings me back to my experience with math in highschool. Trying my best to diviate from herediatary/ learned behavior of frustration and walking away from things I cant find an understanding in. 
 
 
-<img src="imgs/screencapture-127-0-0-1-5500-index-html-2021-12-20-18_27_54.png">
+<img src=".vscode/imgs/Screen Shot 2022-01-08 at 8.32.46 PM.png">
 
-<img src="imgs/screenshot.png">
+<img src=".vscode/imgs/Screen Shot 2022-01-08 at 8.31.56 PM.png">
+
+<img src=".vscode/imgs/Screen Shot 2022-01-08 at 8.32.46 PM.png">
